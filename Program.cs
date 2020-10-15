@@ -8,6 +8,7 @@ namespace csharp_playground
         static void Main(string[] args)
         {
             QueryStringArray();
+            QueryIntArray();
             Console.ReadLine();
         }
 
