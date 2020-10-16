@@ -25,6 +25,10 @@ namespace csharp_playground
             {
                 Console.WriteLine(i);
             }
+
+            ReflectOverQueryResults(dogSpaces, "Explicit");
+            Console.WriteLine("Press any key to continue ....");
+            Console.ReadLine();
         }
 
         static int[] QueryIntArray()
@@ -40,6 +44,9 @@ namespace csharp_playground
             {
                 Console.WriteLine(i);
             }
+
+            ReflectOverQueryResults(gt20);
+
             Console.WriteLine();
 
             Console.WriteLine($"Get type: {gt20.GetType()}");
@@ -47,6 +54,12 @@ namespace csharp_playground
             var arrayGT20 = gt20.ToArray();
 
             return arrayGT20;
+        }
+
+        static void ReflectOverQueryResults(object subset, string queryType = "Explicit")
+        {
+            Console.WriteLine($"**** Info on the query using {queryType} ****");
+            Console.WriteLine("Result set is of type {0}", subset.GetType().Name);
         }
     }
 }
