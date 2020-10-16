@@ -9,7 +9,7 @@ namespace csharp_playground
 
         public Rectangle(double length, double width)
         {
-            Name = "Rectangle";
+            // Name = "Rectangle";
             Length = length;
             Width = width;
         }
