@@ -23,8 +23,6 @@ namespace csharp_playground
                 }
 
                 var fields = type.GetFields();
-                // var underlyingType = type.GetEnumValues("ErrorCode");
-                // Console.WriteLine($"\t\tUnderlying enum type: { underlyingType}");
                 foreach (var field in fields)
                 {
                     var attributes = field.GetCustomAttributes();
