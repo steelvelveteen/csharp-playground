@@ -59,10 +59,6 @@ namespace csharp_playground
             Console.WriteLine($"Method by name: {methodName}");
             // Call that method
             methodName.Invoke(sample, null);
-
-            // Digging into Attributes
-
-
         }
     }
 
@@ -71,12 +67,6 @@ namespace csharp_playground
         public string Name { get; set; }
         public int age = 45;
         public bool isOld = false;
-        // enum ErrorCode
-        // {
-        //     General = 1001,
-        //     Unexpected = 1002,
-        //     Specific = 3003
-        // }
 
         public string GetName()
         {
@@ -95,18 +85,5 @@ namespace csharp_playground
         General = 1001,
         Unexpected = 1002,
         Specific = 3003
-    }
-
-    [AttributeUsage(AttributeTargets.Field)]
-    public class ErrorCodeAttribute : Attribute
-    {
-        public string Code { get; set; }
-        public string ErrorMessage { get; set; }
-        public ErrorCodeAttribute() { }
-        public ErrorCodeAttribute(string code, string message)
-        {
-            ErrorMessage = message;
-            Code = code;
-        }
     }
 }
