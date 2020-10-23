@@ -7,11 +7,7 @@ namespace csharp_playground
     {
         static void Main(string[] args)
         {
-            IDictionary<string, string> superheroes = new Dictionary<string, string>();
-
-            superheroes.Add("Clark Kent", "Superman");
-            superheroes.Add("Bruce Wayne", "Batman");
-            superheroes.Add("Tony Stark", "Iron Man");
+            IDictionary<string, string> superheroes = GetSuperHeroes();
 
             Console.WriteLine($"Number of superheroes: {superheroes.Count}");
 
@@ -24,6 +20,15 @@ namespace csharp_playground
             {
                 Console.WriteLine($"Hereo {heroe.Value} hides under {heroe.Key}");
             }
+        }
+
+        public static IDictionary<string, string> GetSuperHeroes()
+        {
+            return new Dictionary<string, string> {
+                { "Clark Kent", "Superman" },
+                { "Bruce Wayne", "Batman" },
+                { "Tony Stark v", "Iron Man" }
+            };
         }
     }
 }
