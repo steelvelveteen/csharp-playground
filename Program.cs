@@ -15,6 +15,11 @@ namespace csharp_playground
             foreach (IProductModel prod in cart)
             {
                 prod.ShipItem(customer);
+                if (prod is IDigitalProductModel digital)
+                {
+                    // Now you have access to TotalDownLoadsLeft
+                    Console.WriteLine($"For the digital title {digital.Title} you have {digital.TotalDownLoadsLeft} downloads left.");
+                }
             }
         }
 
