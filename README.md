@@ -13,12 +13,9 @@
 100 - Reflections  
 110 - Reflections Attributes  
 120 - Delegates Basic  
-125 - Delegates Basic 2  
 130 - Delegates Complex example State Notifications  
 140 - Events  
 150 - Lambda expressions  
-160 - Events  
-170 - Lambda expressions  
 
 200 - SOLID Single Resonsibility  
 220 - SOLID Open Closed Responsibility  
