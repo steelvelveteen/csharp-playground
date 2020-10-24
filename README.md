@@ -6,7 +6,7 @@
 030 - Abstract classes  
 040 - Interfaces Example Vehicles  
 050 - Interfaces Example Electronic Devices  
-060 - Intefaces Advanced Example IProductModel  
+060 - Interfaces Advanced Example IProductModel  
 070 - Linq Basic  
 080 - Linq with Extension Methods  
 090 - Dictionaries  
