@@ -13,7 +13,7 @@
 100 - Reflections  
 110 - Reflections Attributes  
 120 - Delegates Basic  
-130 - Delegates Complex example State Notifications  
+130 - Delegates Complex example   
 140 - Events  
 150 - Lambda expressions  
 
