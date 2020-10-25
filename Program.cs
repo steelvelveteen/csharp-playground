@@ -18,8 +18,12 @@ namespace csharp_playground
             // which is basically a ref to the solution variable
             // The methood's signature takes in a argument of type 'out int'
             // and this method DOES NOT RETURN ANYTHING
-            int solution;
-            DoubleIt(25, out solution);
+
+            // int solution;
+            // DoubleIt(25, out solution); 
+
+            // Or you do it in a one-statement declaration as below
+            DoubleIt(25, out int solution);
             Console.WriteLine($"Double of 25: {solution}");
             Console.WriteLine();
 
