@@ -1,9 +1,13 @@
 # C-Sharp
+
 ## Review of Advanced C# features  
 
 ### Youtube playlist I followed  
-##### https://www.youtube.com/playlist?list=PLLWMQd6PeGY12yNE714jffLFnMVZCwvvZ
-##### https://www.youtube.com/playlist?list=PL1OYTSGn7ia-drv5-xugztYN6D9Jx2wJX  
+
+`https://www.youtube.com/playlist?list=PLLWMQd6PeGY12yNE714jffLFnMVZCwvvZ`
+
+`https://www.youtube.com/playlist?list=PL1OYTSGn7ia-drv5-xugztYN6D9Jx2wJX`
+
 010 - Methods with ref, out and params  
 020 - Inheritance and polymorphism  
 030 - Abstract classes  
@@ -16,7 +20,7 @@
 100 - Reflections  
 110 - Reflections Attributes  
 120 - Delegates Basic  
-130 - Delegates Complex example   
+130 - Delegates Complex example  
 140 - Events  
 150 - Lambda expressions  
 
