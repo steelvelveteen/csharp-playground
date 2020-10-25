@@ -2,37 +2,66 @@
 
 namespace csharp_playground
 {
+    public class SimpleMath
+    {
+        public static int Add(int x, int y) => x + y;
+        public static int Subtract(int x, int y) => x - y;
+    }
+    public class NonStaticMath
+    {
+        public int Add(int x, int y) => x + y;
+        public int Subtract(int x, int y) => x - y;
+    }
     class Program
     {
-        // Declare a delegate with the same signature as the method SayHelloo
-        // you want to store to be invoked later => void and no parameters
-        public delegate void SayHelloDelegate();
-        public delegate void SayHiWithNameDelegate(string name);
+        /**
+        Every delegate has the ability to call their methods synchro or asynchronously with the help of Threads
+        delegates can hold one or more methods
+        */
 
-        
+        /** The following delegate can point to any method
+        taking to in parameters returning an integer
+        */
+        public delegate int BinaryOp(int x, int y);
+        /** Behind the scenes ...
+        sealed class BinaryOp : System.MulticastDelegate 
+        {
+             public int Invoke(int x, int y);
+
+             public IAsyncResult BeginInvoke(int x, int y, 
+                  AsyncCallback callback, object state);
+
+             public int EndInvoke(IAsyncResult result);
+        }
+        */
+
         static void Main(string[] args)
         {
-          // Create new instance of delegate and pass in the static method
-          // Syntactic sugar : SayHelloDelegate sayHiDelegate = SayHello;
-          SayHelloDelegate sayHiDelegate = new SayHelloDelegate(SayHello);  
-          SayHiWithNameDelegate sayHiNameDelegate = SayHelloWithName;
+            BinaryOp op = new BinaryOp(SimpleMath.Add);
+            // BinaryOp op;
+            // op = SimpleMath.Add;
+            var result = op.Invoke(7, 7);
+            Console.WriteLine($"7 + 7 = {result}");
 
-          // Invoke the method via the delegate
-          // Syntactic sugar : you can just do sayHiDelegate()
-          sayHiDelegate.Invoke();
+            op = SimpleMath.Subtract;
+            result = op(10, 20); // without the Invoke()
+            Console.WriteLine($"10 - 20 = {result}");
 
-          sayHiNameDelegate("Joey");
-          
-        }
+            Delegate[] storedMethods = op.GetInvocationList();
+            foreach (Delegate m in storedMethods)
+            {
+                Console.WriteLine(m.Method);
+                // Target is null because it is a static method
+                Console.WriteLine(m.Target);
+            }
 
-        public static void SayHello()
-        {
-            Console.WriteLine("Hi there!");
-        }
-
-        public static void SayHelloWithName(string name)
-        {
-            Console.WriteLine($"Hi there Mr. {name}");
+            NonStaticMath n = new NonStaticMath();
+            BinaryOp op2 = new BinaryOp(n.Add);
+            foreach (Delegate d in op2.GetInvocationList())
+            {
+                Console.WriteLine(d.Method);
+                Console.WriteLine(d.Target);
+            }
         }
     }
 }
