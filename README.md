@@ -22,7 +22,7 @@
 120 - Delegates Basic  
 130 - Delegates Complex example  
 140 - Events  
-150 - Lambda expressions  
+150 - Anonymous methods and lambda expressions  
 
 200 - SOLID Single Resonsibility  
 220 - SOLID Open Closed Responsibility  
