@@ -46,10 +46,10 @@ namespace csharp_playground
             return sum;
         }
 
-        static void DoubleIt(int x, out int solution)
-        {
-            solution = x * 2;
-        }
+        static void DoubleIt(int x, out int solution) => solution = x * 2;
+        // {
+        //     solution = x * 2;
+        // }
 
         static void Swap(ref int num1, ref int num2)
         {
