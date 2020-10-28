@@ -26,12 +26,12 @@
 - 160 - File I/O
 - 170 - HttpClient
 
-200 - SOLID Single Resonsibility  
-220 - SOLID Open Closed Responsibility  
-240 - SOLID Liskov Principle  
-260 - SOLID Interfaces segregation  
-280 - SOLID Dependency Inversion  
+- 200 - SOLID Single Resonsibility  
+- 220 - SOLID Open Closed Responsibility  
+- 240 - SOLID Liskov Principle  
+- 260 - SOLID Interfaces segregation  
+- 280 - SOLID Dependency Inversion  
 
 Practical C#  
 
-400 - ConsoleUI Serilog DI and appsettings
+- 400 - ConsoleUI Serilog DI and appsettings
