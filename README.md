@@ -24,5 +24,6 @@
 260 - SOLID Interfaces segregation  
 280 - SOLID Dependency Inversion  
 
-Practical C#
+Practical C#  
+
 400 - ConsoleUI Serilog DI and appsettings
