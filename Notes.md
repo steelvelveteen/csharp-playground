@@ -10,3 +10,6 @@ logging system
 - Install Serilog.Settings.Configuration 3.1.0  
 
 - Serilog.Sinks.Console 3.1.1
+
+- Add an appsettings.json file
+
