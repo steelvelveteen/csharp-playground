@@ -1,4 +1,5 @@
 # C-Sharp
+
 ## Review of Advanced C# features  
 
 010 - Methods with ref, out and params  
@@ -22,3 +23,6 @@
 240 - SOLID Liskov Principle  
 260 - SOLID Interfaces segregation  
 280 - SOLID Dependency Inversion  
+
+Practical C#
+400 - ConsoleUI Serilog DI and appsettings
