@@ -20,6 +20,8 @@ namespace csharp_playground
                 // Log the number
                 _logger.LogInformation("Run number {runNumber}", i );
             }
+            var env = _configuration.GetValue<string>("ASPNETCORE_ENVIRONMENT");
+            _logger.LogInformation(env);
         }
     }
 }
