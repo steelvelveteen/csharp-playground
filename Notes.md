@@ -12,3 +12,5 @@ logging system
 - Serilog.Sinks.Console 3.1.1
 
 - Add an appsettings.json file
+
+- For NET Core install Serilog.AspNetCore
