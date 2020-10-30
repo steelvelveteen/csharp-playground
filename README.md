@@ -23,8 +23,9 @@
 - 130 - Delegates Complex example  
 - 140 - Events  
 - 150 - Anonymous methods and lambda expressions  
-- 160 - File I/O
-- 170 - HttpClient
+- 160 - Async Programming Basic  
+
+Design Patterns  
 
 - 200 - SOLID Single Resonsibility  
 - 220 - SOLID Open Closed Responsibility  
@@ -34,4 +35,5 @@
 
 Practical C#  
 
-- 400 - ConsoleUI Serilog DI and appsettings
+- 400 - ConsoleUI Serilog DI and appsettings  
+- 410 - HttpClient  
