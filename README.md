@@ -23,9 +23,17 @@
 - 130 - Delegates Complex example  
 - 140 - Events  
 - 150 - Anonymous methods and lambda expressions  
+- 160 - Async Programming Basic  
 
-- 200 - SOLID Single Resonsibility  
+Design Patterns  
+
+- 200 - SOLID Single Responsibility  
 - 220 - SOLID Open Closed Responsibility  
 - 240 - SOLID Liskov Principle  
 - 260 - SOLID Interfaces segregation  
 - 280 - SOLID Dependency Inversion  
+
+Practical C#  
+
+- 400 - ConsoleUI Serilog DI and appsettings  
+- 410 - HttpClient  
