@@ -27,7 +27,7 @@
 
 Design Patterns  
 
-- 200 - SOLID Single Resonsibility  
+- 200 - SOLID Single Responsibility  
 - 220 - SOLID Open Closed Responsibility  
 - 240 - SOLID Liskov Principle  
 - 260 - SOLID Interfaces segregation  
