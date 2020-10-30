@@ -21,9 +21,9 @@ namespace csharp_playground
             .WriteTo.Console()
             .CreateLogger();
             
-            // Step 3 Setting up DI
             Log.Logger.Information("Application starting");
-
+            
+            // Step 3 Setting up DI
             var host = Host.CreateDefaultBuilder()
             .ConfigureServices((context, services) => 
             {
