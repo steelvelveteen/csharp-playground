@@ -2,6 +2,7 @@
 
 namespace csharp_playground
 {
+    // Revisit delegate complex example branch
     class Program
     {
         delegate int Operation(int a, int b);
@@ -21,7 +22,7 @@ namespace csharp_playground
             };
             op2(10, 5);
 
-            // Combining anonymous method with lambda expression
+            // lambda expression
             Operation3 op3 = (a, b) => a * b;
             int result3 = op3(5, 4);
             Console.WriteLine($"5 * 4 = {result3}");
