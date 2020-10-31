@@ -8,6 +8,7 @@ namespace csharp_playground
         delegate int Operation(int a, int b);
         delegate void Operation2(int a, int b);
         delegate int Operation3(int a, int b);
+        delegate int Operation4(int a, int b);
 
         static void Main(string[] args)
         {
@@ -27,6 +28,13 @@ namespace csharp_playground
             int result3 = op3(5, 4);
             Console.WriteLine($"5 * 4 = {result3}");
 
+            // Statement lambda
+            Operation4 op4 = (a, b) => {
+                // do something more before returning
+                return a * b;
+            };
+            int result4 = op4(6, 6);
+            Console.WriteLine($"6 * 6 = {result4}");
         }
 
         static int Add(int a, int b)
