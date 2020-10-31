@@ -1,83 +1,63 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace csharp_playground
 {
     class Program
     {
+
         static void Main(string[] args)
         {
-            Console.WriteLine("*** Car class that has the ability to inform external entities about its current engine state.");
-            Car c1 = new Car("SlugBug", 100, 10);
+            List<Employee> empList = new List<Employee>()
+            {
+                new Employee { Id = 101, Name = "Maria", Salary = 5000, Experience = 5 },
+                new Employee { Id = 101, Name = "Sonoya", Salary = 4000, Experience = 4 },
+                new Employee { Id = 101, Name = "Antonia", Salary = 3000, Experience = 3 },
+                new Employee { Id = 101, Name = "Sarah", Salary = 3500, Experience = 2 },
+            };
 
-            c1.RegisterWithCarEngine(new Car.CarEngineHandler(OnCarEngineEvent));
+            // Version 1.0
+            // You declare the delegate and make it point to the Promote method
+            // IsPromotableDel isPromotableDel = new IsPromotableDel(Promote);
+            // Employee.PromoteEmployee(empList, isPromotableDel);
 
-            Console.WriteLine("**** Speeding up ****");
-            for (int i = 0; i < 6; i++)
-                c1.Accelerate(20);
-            Console.ReadLine();
+            // Version 2.0
+            // No need to create the delegate pointer, just pass the method as a delegate
+            // parameter as below
+            // Employee.PromoteEmployee(empList, Promote);
+
+            // Version 3.0
+            // No need to define the method that the delegate is pointing to.
+            // Directly pass an anonymous method(lambda expression) that matches the delegate's signature
+            Employee.PromoteEmployee(empList, emp => emp.Experience >= 3);
         }
 
-        public static void OnCarEngineEvent(string msg)
-        {
-            Console.WriteLine("\n**** Message from Car Object ****");
-            Console.WriteLine("=> {0}", msg);
-            Console.WriteLine("***************************\n");
-        }
+        // Only needed for Versions 1.0 and 2.0
+        // static bool Promote(Employee employee) => employee.Experience >= 3;
+
     }
+    public delegate bool IsPromotableDel(Employee employee);
 
-    public class Car
+    public class Employee
     {
-        // 1) Defining a delegate type
-        public delegate void CarEngineHandler(string msgForCaller);
-        // 2) Defining a member variable of this delegate
-        private CarEngineHandler listOfHandlers;
-        // 3) Add registration function for the caller
-        public void RegisterWithCarEngine(CarEngineHandler methodToCall)
-        {
-            listOfHandlers = methodToCall;
-        }
-        // 4) Implement the Accerelate() method to invoke the delegates'
-        // invocation list under the right circumstances
-        public void Accelerate(int delta)
-        {
-            if (carIsDead)
-            {
-                if (listOfHandlers != null)
-                {
-                    listOfHandlers.Invoke("Sorry, this car is dead ...");
-                }
-            }
-            else
-            {
-                CurrentSpeed += delta;
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+        public int Experience { get; set; }
 
-                if (10 == (MaxSpeed - CurrentSpeed) && listOfHandlers != null)
+        public static void PromoteEmployee(List<Employee> employeeList, IsPromotableDel isEligible)
+        {
+            foreach (Employee emp in employeeList)
+            {
+                if (isEligible(emp))
                 {
-                    listOfHandlers("Careful buddy! Gonna blow!");
-                }
-                if (CurrentSpeed >= MaxSpeed)
-                {
-                    carIsDead = true;
+                    Console.WriteLine($"{emp.Name} has been promoted.");
                 }
                 else
                 {
-                    Console.WriteLine("CurrentSpeed = {0}", CurrentSpeed);
+                    Console.WriteLine($"{emp.Name} will have to wait.");
                 }
             }
-        }
-        // Internal state data.
-        public int CurrentSpeed { get; set; }
-        public int MaxSpeed { get; set; }
-        public string PetName { get; set; }
-
-        private bool carIsDead;
-
-        public Car() { }
-        public Car(string name, int maxSp, int currSp)
-        {
-            CurrentSpeed = currSp;
-            MaxSpeed = maxSp;
-            PetName = name;
         }
     }
 }
