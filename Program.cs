@@ -28,8 +28,17 @@ namespace csharp_playground
 
             // Version 3.0
             // No need to define the method that the delegate is pointing to.
-            // Directly pass an anonymous method(lambda expression) that matches the delegate's signature
+            // Directly pass an anonymous method that matches the delegate's signature
+            Employee.PromoteEmployee(empList, delegate (Employee employee)
+           {
+               return employee.Experience >= 5;
+           });
+
+            // Version 4.0 lambda expression
+            // No need to define the method that the delegate is pointing to.
+            // Directly pass a lambda expression that matches the delegate's signature
             Employee.PromoteEmployee(empList, emp => emp.Experience >= 3);
+
         }
 
         // Only needed for Versions 1.0 and 2.0
