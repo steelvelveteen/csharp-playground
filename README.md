@@ -20,7 +20,7 @@
 - 100 - Reflections  
 - 110 - Reflections Attributes  
 - 120 - Delegates Basic  
-- 130 - Delegates Complex example  
+- 130 - Delegates Complex example (inc. anonymous methods and lambda expr)  
 - 140 - Events  
 - 150 - Anonymous methods and lambda expressions  
 - 160 - Async Programming Basic  
