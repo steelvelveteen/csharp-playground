@@ -24,6 +24,7 @@
 - 140 - Events  
 - 150 - Anonymous methods and lambda expressions  
 - 160 - Async Programming Basic  
+- 170 - Structs  
 
 Design Patterns  
 
