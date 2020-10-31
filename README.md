@@ -24,6 +24,8 @@
 - 140 - Events  
 - 150 - Anonymous methods and lambda expressions  
 - 160 - Async Programming Basic  
+- 170 - Structs  
+- 180 - Switch expressions (C# 8.0)  
 
 Design Patterns  
 
