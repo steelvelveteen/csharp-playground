@@ -47,6 +47,7 @@ namespace csharp_playground
         // Really cool feature
         static double DoModernMath(double x, double y, MathType mathType)
         {
+            // return mathType switch
             var output = mathType switch
             {
                 MathType.Add => x * y,
