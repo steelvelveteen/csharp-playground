@@ -15,13 +15,8 @@ namespace csharp_playground
             animalIDInfo.Owner = owner;
         }
 
-        public Animal() : this("No Name", "No Sound")
-        {
-
-        }
-        public Animal(string name) : this(name, "No Sound")
-        {
-        }
+        public Animal() : this("No Name", "No Sound") { }
+        public Animal(string name) : this(name, "No Sound") { }
         public Animal(string name, string sound)
         {
             Name = name;
