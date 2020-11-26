@@ -26,6 +26,7 @@
 - 160 - Async Programming Basic  
 - 170 - Structs  
 - 180 - Switch expressions (C# 8.0)  
+- 190 - Task Parallel library  
 
 Design Patterns  
 
