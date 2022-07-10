@@ -26,16 +26,18 @@
 - 160 - Async Programming Basic  
 - 170 - Structs  
 - 180 - Switch expressions (C# 8.0)  
+- 190 - Task Parallel library  
 
 Design Patterns  
 
-- 200 - SOLID Single Responsibility  
-- 220 - SOLID Open Closed Responsibility  
-- 240 - SOLID Liskov Principle  
-- 260 - SOLID Interfaces segregation  
-- 280 - SOLID Dependency Inversion  
+- 300 - SOLID Single Responsibility  
+- 320 - SOLID Open Closed Responsibility  
+- 340 - SOLID Liskov Principle  
+- 360 - SOLID Interfaces segregation  
+- 380 - SOLID Dependency Inversion  
 
 Practical C#  
 
 - 400 - ConsoleUI Serilog DI and appsettings  
 - 410 - HttpClient  
+- 420 - Postgres Console  
