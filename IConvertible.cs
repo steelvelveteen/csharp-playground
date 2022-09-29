@@ -1,7 +1,7 @@
 namespace csharp_playground
 {
-    public interface IConvertible
-    {
-        void OpenHood(); 
-    }
+	interface IConvertible
+	{
+		void OpenHood();
+	}
 }
